@@ -1,0 +1,27 @@
+<div class="page-home__container">
+	<form class="form-inline form-hightlights">
+		<div class="form-group">
+			  <label for="inlineFormCustomSelect">Cinema</label>
+			  <select ng-model="vmHighlights.form.cinema" class="form-control" id="inlineFormCustomSelect">
+			    <option value="" selected="selected">Escolha...</option>
+			    <option value="3">Cinemark Barra Downtown</option>
+			    <option value="1322">Cinemark Jacarepagua</option>
+			  </select>
+		</div>
+		<div class="form-group">
+			  <label for="inlineFormCustomSelect">Genero</label>
+			  <select ng-model="vmHighlights.form.genero" class="form-control" id="inlineFormCustomSelect">
+			    <option value="" selected="selected">Escolha...</option>
+			    <option value="musical">Musical</option>
+			    <option value="romance">Romance</option>
+			    <option value="drama">Drama</option>
+			    <option value="terror">Terror</option>
+			  </select>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary" ng-click="vmHighlights.filtrar()">Filtrar...</button>
+		</div>
+	</form>
+	<presales-widget items="vmHighlights.items"></presales-widget>
+	<highlights-widget items="vmHighlights.items"></highlights-widget>
+</div>
