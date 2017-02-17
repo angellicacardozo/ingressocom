@@ -1,7 +1,7 @@
 /**
-** master.controller.js
+** highlights.controller.js
 **
-** @description Master Controller Class
+** @description Highlights Controller Class
 **/
 (function() {
 "use strict";
