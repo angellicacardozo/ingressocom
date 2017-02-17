@@ -1,0 +1,15 @@
+<div>
+	<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+	  <div style="background: transparent url({{slide.image}}) center center no-repeat;background-size: cover;height:400px" uib-slide ng-repeat="slide in slides | filter:filterPresales track by slide.id">
+	    <div class="carousel-caption">
+	      <h4>{{slide.title}}</h4>
+	      <p>{{slide.text}}</p>
+	      <p><a href="#" class="btn btn-info">Consultar salas...</a></p>
+	    </div>
+	  </div>
+	</div>
+	<div ng-show="slides.length === 0" class="alert alert-danger fade in alert-dismissable">
+	    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+	    <strong>Nenhum resultado em pré-venda!</strong> Os critérios de busca selecionados não correspondem a um ou mais produtos, por favor, tente novamente.
+	</div>	
+</div>

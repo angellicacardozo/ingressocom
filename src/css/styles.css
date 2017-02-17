@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+.logo-holder {
+    float: left;
+    margin-right: 15px;
+}
+.ng-enter, .ng-hide {
+    /* transition on enter for .5s */
+    transition: opacity ease .5s;
+
+    /* start with opacity 0 (invisible) */
+    opacity: 0;
+}
+
+/* end 'enter' transition */
+.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+}
+.form-hightlights {
+    padding: 1em 2em 2.2em 2em;
+}
+.form-hightlights .form-group {
+    padding: 0.5em;
+}
+.alert {
+    margin: 0.5em;
+}

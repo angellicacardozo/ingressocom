@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Ingresso</title>
+  <!-- STYLES -->
+  <!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <!-- endbuild --> 
+  <!-- SCRIPTS -->
+  <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/angular/angular.js"></script>
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="components/a0-angular-storage/dist/angular-storage.min.js"></script>
+  <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- endbuild -->
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="js/dashboard.min.js"></script>
+</head>
+<body ng-controller="MasterController" class="{{bodylayout}}">
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar">
+        <li class="sidebar-main">
+          <a ng-click="toggleSidebar()">
+            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+          </a>
+        </li>
+        <li class="sidebar-title"><span>NAVEGAÇÃO</span></li>
+        <li class="sidebar-list">
+          <a href="#/">Highlights<span class="menu-icon fa fa-star-o"></span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+        <!-- Header Bar -->
+        <div class="header-bar row header">
+          <div class="col-xs-12">
+            <div class="meta">
+              <div class="logo-holder">
+                <img width="140px" src="img/ingresso_logo.gif" />
+              </div>
+              <div class="page">
+                Highlights
+              </div>
+              <div class="breadcrumb-links">
+                Home / Highlights
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view></div>
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Banner</th>
+				<th>Filme</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in rows | filter:filterNotPresales track by row.id">
+				<td><img src="{{row.image}}"></td>
+				<td>
+					<h3>{{row.title}}</h3>
+					{{row.synopsis}}
+				</td>
+				<td><a href="#" class="btn btn-info">Consultar salas...</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div ng-show="rows.length === 0" class="alert alert-danger fade in alert-dismissable">
+	    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+	    <strong>Nenhum resultado!</strong> Os critérios de busca selecionados não correspondem a um ou mais produtos, por favor, tente novamente.
+	</div>
+</div>
